@@ -16,5 +16,15 @@ describe Luhn do
         end
       end
     end
+
+    context 'When number is two digits long' do
+      context 'When most significant digit is less than 5' do
+        context 'When the most significant * 2 + the least sig == 10' do
+          it 'returns true' do
+            expect(Luhn.valid?(42)).to eq true
+          end
+        end
+      end
+    end
   end
 end
