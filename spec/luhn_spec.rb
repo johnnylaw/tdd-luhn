@@ -24,6 +24,12 @@ describe Luhn do
             expect(Luhn.valid?(42)).to eq true
           end
         end
+
+        context 'When the most sig * 2 + the least sig != 10' do
+          it 'returns false' do
+            expect(Luhn.valid?(43)).to eq false
+          end
+        end
       end
     end
   end
