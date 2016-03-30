@@ -11,6 +11,9 @@ describe Luhn do
       end
 
       context 'When digit is not zero' do
+        it 'returns false' do
+          expect(Luhn.valid?(3)).to eq false
+        end
       end
     end
   end
